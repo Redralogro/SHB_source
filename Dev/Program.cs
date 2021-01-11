@@ -5,29 +5,16 @@ namespace Dev
     class Program
     {
         static void Main(string[] args){
-        // {   int i ;
-        //     int j;
-
-        //     Console.Write("Enter First Name:");
-        //          i = Int16.Parse(Console.ReadLine());
-        //     Console.Write(i);
-        Ioc test = Factory.getObject();
-        test.Main();
+          CustomerBusinessLogic customerLogic = new CustomerBusinessLogic() ;
+          customerLogic._dataAccess = new DataAccess();
+          var customer = customerLogic._dataAccess;
+          Console.WriteLine(customer.GetCustomerName(2));
+          
         }
-        // static void Main(string[] args){
-        // // {   int i ;
-        // //     int j;
-
-        // //     Console.Write("Enter First Name:");
-        // //          i = Int16.Parse(Console.ReadLine());
-        // //     Console.Write(i);
-        // Ioc test = new Ioc();
-        // test.Main();
-        //}
-    }
-    public class Factory {
-        public static Ioc getObject(){
-            return  new Ioc();
-        }
+        //  public class Factory {
+        //     public static Ioc getObject(){
+        //         return  new Ioc();
+        //     }
+        // }
     }
 }

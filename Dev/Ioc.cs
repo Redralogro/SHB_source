@@ -3,10 +3,29 @@ using System.Collections.Generic;
 
 namespace Dev
 {
-    public class Ioc
+public class CustomerBusinessLogic
+{
+    public DataAccess _dataAccess;
+
+    public CustomerBusinessLogic()
     {
-       public  void Main(){
-           Console.WriteLine("HÚ le");
-       } 
+        _dataAccess = new DataAccess();
     }
+
+    public string GetCustomerName(int id)
+    {
+        _dataAccess = new DataAccess();
+        return _dataAccess.GetCustomerName(id);
+    }
+}
+public class DataAccess
+{
+    public DataAccess()
+    {
+    }
+
+    public string GetCustomerName(int id) {
+        return "Dummy Customer Name " + id; // get it from DB in real app
+    }
+}
 }
