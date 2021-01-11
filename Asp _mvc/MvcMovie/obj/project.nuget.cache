@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jU8JM7SV0Scoi0JLbE4NbNp6u5xH8cim1kotwFhMeXd692fPkqyq9mj5RqM5up1jcTgE//1wPylkjTlFFdSFSg==",
+  "dgSpecHash": "MqM7z+WhEXCti0lPNNK3yzR11MhJjjChneLQF3zm9+FxXePH7ZgnE8BewlNCy3AH9rKqcZSeRjt0OqhWTUBL0A==",
   "success": true,
   "projectFilePath": "F:\\2020.2\\Intern_ship_SHB\\SHB_source\\Asp _mvc\\MvcMovie\\MvcMovie.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kythuat88\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
