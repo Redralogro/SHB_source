@@ -6,7 +6,7 @@ namespace Dev
     public class IocLogic
     {
       
-       IocAccess test = new IocAccess();
+       IocAccess test = Factory.getObject();
         public string getName(){
             return test.Main();
         }
@@ -18,8 +18,8 @@ namespace Dev
        }  
     }
     public class Factory {
-        public static IocLogic getObject(){
-            return  new IocLogic();
+        public static IocAccess getObject(){
+            return  new IocAccess();
         }
     }
 }
