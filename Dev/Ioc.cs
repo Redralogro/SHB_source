@@ -3,10 +3,23 @@ using System.Collections.Generic;
 
 namespace Dev
 {
-    public class Ioc
+    public class IocLogic
     {
-       public  void Main(){
-           Console.WriteLine("HÚ le");
-       } 
+      
+       IocAccess test = new IocAccess();
+        public string getName(){
+            return test.Main();
+        }
+    }
+    public class IocAccess 
+    {
+        public string Main(){
+           return "HÚ le";
+       }  
+    }
+    public class Factory {
+        public static IocLogic getObject(){
+            return  new IocLogic();
+        }
     }
 }
