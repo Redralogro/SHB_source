@@ -11,7 +11,8 @@ namespace Dev
         //     Console.Write("Enter First Name:");
         //          i = Int16.Parse(Console.ReadLine());
         //     Console.Write(i);
-        Ioc test = Factory.getObject();
+        Ioc test ;
+        test = Factory.getObject();
         test.Main();
         }
         // static void Main(string[] args){
