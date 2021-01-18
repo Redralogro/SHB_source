@@ -3,10 +3,41 @@ using System.Collections.Generic;
 
 namespace Dev
 {
-    public class Ioc
+   public interface ICustomerDataAccess
+{
+    string GetCustomerName(int id);
+}
+
+public class CustomerDataAccess: ICustomerDataAccess
+{
+    public CustomerDataAccess() {
+    }
+
+    public string GetCustomerName(int id) {
+        return "Ahihi";        
+    }
+}
+
+public class DataAccessFactory
+{
+    public static ICustomerDataAccess GetCustomerDataAccessObj() 
     {
-       public  void Main(){
-           Console.WriteLine("HÚ le");
-       } 
+        return new CustomerDataAccess();
+    }
+}
+
+    public class CustomerBusinessLogic
+    {
+        ICustomerDataAccess _custDataAccess;
+
+        public CustomerBusinessLogic()
+        {
+            _custDataAccess = DataAccessFactory.GetCustomerDataAccessObj();
+        }
+
+        public string GetCustomerName(int id)
+        {
+            return _custDataAccess.GetCustomerName(id);
+        }
     }
 }
