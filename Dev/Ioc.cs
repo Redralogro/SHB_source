@@ -3,48 +3,39 @@ using System.Collections.Generic;
 
 namespace Dev
 {
-   public interface ICustomerDataAccess
-{
-    string GetCustomerName(int id);
-}
+ public interface IGetName {
+     string GetCustomerName(int i);
+ }
+ public class Service : IGetName {
+    public Service() {
 
-public class CustomerDataAccess: ICustomerDataAccess
-{
-    public CustomerDataAccess() {
     }
-
-    public string GetCustomerName(int id) {
-        return "Ahihi";        
-    }
-}
-    public class CustomerBusinessLogic
+    public string GetCustomerName (int i)
     {
-        ICustomerDataAccess _custDataAccess;
-
-        public CustomerBusinessLogic(ICustomerDataAccess custDataAccess )
-        {
-            _custDataAccess = custDataAccess;
+        return "Vũ Đức Long";
+    }
+    }
+    public class Customer {
+        IGetName _service;
+        public Customer() {
+            _service = new Service();
         }
-        public CustomerBusinessLogic()
-        {
-            _custDataAccess = new CustomerDataAccess();
+        public Customer(IGetName getname) {
+            _service = getname ;
         }
-        public string ProcessCustomerData(int id)
+        public string GetCustomer (int i)
         {
-            return _custDataAccess.GetCustomerName(id);
+            return _service.GetCustomerName(i);
+        }
+    } 
+    public class Provider {
+        Customer _customer;
+        public Provider()
+        {
+            _customer = new Customer(new Service());
+        }
+        public string CustomerName(int i){
+            return _customer.GetCustomer(i);
         }
     }
-    public class CustomerService
-{
-    CustomerBusinessLogic _customerBL;
-
-    public CustomerService()
-    {
-        _customerBL = new CustomerBusinessLogic(new CustomerDataAccess());
-    }
-
-    public string GetCustomerName(int id) {
-        return _customerBL.ProcessCustomerData(id);
-    }
-}
 }

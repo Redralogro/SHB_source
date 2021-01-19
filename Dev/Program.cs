@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 namespace Dev
 {
     class Program
     {
-        static void Main(string[] args){
-        CustomerService service = new CustomerService();
-        var customer = service.GetCustomerName(1);
-        Console.WriteLine(customer);
+       static void Main(string[] args){
+        Console.OutputEncoding = Encoding.UTF8;
+        Provider provider = new Provider();
+        var Name = provider.CustomerName(1);
+        Console.WriteLine(Name);
         }
     }
 }
