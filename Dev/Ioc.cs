@@ -17,28 +17,34 @@ public class CustomerDataAccess: ICustomerDataAccess
         return "Ahihi";        
     }
 }
-
-public class DataAccessFactory
-{
-    public static ICustomerDataAccess GetCustomerDataAccessObj() 
-    {
-        return new CustomerDataAccess();
-    }
-}
-
     public class CustomerBusinessLogic
     {
         ICustomerDataAccess _custDataAccess;
 
+        public CustomerBusinessLogic(ICustomerDataAccess custDataAccess )
+        {
+            _custDataAccess = custDataAccess;
+        }
         public CustomerBusinessLogic()
         {
-            _custDataAccess = DataAccessFactory.GetCustomerDataAccessObj();
+            _custDataAccess = new CustomerDataAccess();
         }
-
-        public string GetCustomerName(int id)
+        public string ProcessCustomerData(int id)
         {
             return _custDataAccess.GetCustomerName(id);
         }
     }
+    public class CustomerService
+{
+    CustomerBusinessLogic _customerBL;
+
+    public CustomerService()
+    {
+        _customerBL = new CustomerBusinessLogic(new CustomerDataAccess());
+    }
+
+    public string GetCustomerName(int id) {
+        return _customerBL.ProcessCustomerData(id);
+    }
 }
-//Disavantage : when ICustomerDataAccess has another implementation,CustomerBusinessLogic have change too.s
+}
