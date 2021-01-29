@@ -38,3 +38,10 @@ F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\obj\Debug\netcoreapp3.1\M
 F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\MvcUI\package-lock.json
 F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\MvcUI\package.json
 F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+F:\2020.2\Intern_ship_SHB\SHB_source\Asp _mvc\MvcMovie\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
